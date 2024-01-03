@@ -1,13 +1,25 @@
-# PA Youth Vote Search 922
+# Hackathon: PA Youth Vote
 
-## Introduction
+### Team Name
+Italian Cannon
+
+### Team Members
+- @yuqisun - captain
+- @limyzhu163 - SL/Architect
+- @jxm6 - Developer
+- @xcyyndw - Developer
+- @VictorWuxy - Developer
+- @lnlinlin1 - Developer
+- @wflsnow - Developer
+- @pitaya777 - Developer
+
 ### Mission
 PA Youth Vote is a nonpartisan collaboration of youth, educators, and organizations working to elevate youth voices, improve public school civics education, and empower youth as civic actors. Together, they are building youth political power and changing the policy and culture around youth voting in Pennsylvania.
 
 ### Challenge
 PA Youth Vote is seeking a solution that will make voting more accessible to young people who are of voting age in high school and college. They would like to use technology to facilitate youth voting: makeing it transparent, fun and rewarding by creating an interactive application or system that will encourage youth to engage civically, including registering to vote, researching candidates(i.e. creating an Election Day "cheat sheet"), and helping them vote by mail or find their polling location.
 
-## Solution
+### Solution
 * Responsive Platform
   - Angular based Responsive platform created for RCPY Votes. This responsive UI design will automatically adjust for different screen sizes and viewports, means the RCPY Votes can be deployed to different devices cross Mobile/Tablet/Desktop.
 * Unified Platform
