@@ -1,0 +1,52 @@
+{
+	"data": [
+		{
+			"id": "1000",
+			"code": "2023-09-11",
+			"name": "Reply for your complaince #2023091111",
+			"description": "Thanks for your information, we will contact you soon",
+			"image": "bamboo-watch.jpg",
+			"price": 65,
+			"category": "Accessories",
+			"quantity": 24,
+			"inventoryStatus": "INSTOCK",
+			"rating": 5
+		},
+		{
+			"id": "1001",
+			"code": "2023-09-12",
+			"name": "Reply for your advice #2023091222",
+			"description": "Thanks for your information, we will contact you soon",
+			"image": "black-watch.jpg",
+			"price": 72,
+			"category": "Accessories",
+			"quantity": 61,
+			"inventoryStatus": "OUTOFSTOCK",
+			"rating": 4
+		},
+		{
+			"id": "1002",
+			"code": "2023-09-21",
+			"name": "Reply for your advice #2023091232",
+			"description": "Thanks for your information, we will contact you soon",
+			"image": "blue-band.jpg",
+			"price": 79,
+			"category": "Fitness",
+			"quantity": 2,
+			"inventoryStatus": "LOWSTOCK",
+			"rating": 3
+		},
+		{
+			"id": "1003",
+			"code": "2023-09-13",
+			"name": "Reply for your query #2023091124",
+			"description": "Thanks for your information, we will contact you soon",
+			"image": "blue-t-shirt.jpg",
+			"price": 29,
+			"category": "Clothing",
+			"quantity": 25,
+			"inventoryStatus": "INSTOCK",
+			"rating": 5
+		}
+	]
+}

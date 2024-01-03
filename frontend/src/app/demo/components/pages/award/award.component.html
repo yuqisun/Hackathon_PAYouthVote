@@ -1,0 +1,60 @@
+<div class="grid">
+    <div class="col-12">
+        <div class="card px-6 py-6">
+            <p-toast></p-toast>
+            <p-toolbar styleClass="mb-4">
+                <ng-template pTemplate="left">
+                    <div class="my-2">
+                        <h5 class="m-0">Your Award</h5>
+                       <!--<button pButton pRipple label="New" icon="pi pi-plus" class="p-button-success mr-2" (click)="openNew()"></button>-->
+                        <!--<button pButton pRipple label="Redeem" icon="pi pi-trash" class="p-button-success" (click)="deleteSelectedProducts()" [disabled]="!selectedProducts || !selectedProducts.length"></button>-->
+                    </div>
+                </ng-template>
+
+                <ng-template pTemplate="right">
+                   
+                   <!-- <p-fileUpload mode="basic" accept="image/*" [maxFileSize]="1000000" label="Import" chooseLabel="Import" class="mr-2 inline-block"></p-fileUpload>
+                    <button pButton pRipple label="Export" icon="pi pi-upload" class="p-button-help" (click)="dt.exportCSV()"></button>-->
+                </ng-template>
+            </p-toolbar>
+
+            <p-table #dt [value]="awards" [columns]="cols" responsiveLayout="scroll" [rows]="10" [globalFilterFields]="['name','country.name','representative.name','status']" [paginator]="true" [rowsPerPageOptions]="[10,20,30]" [showCurrentPageReport]="true" currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [(selection)]="selectedProducts" selectionMode="multiple" [rowHover]="true" dataKey="id">
+               
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th></th>
+                        <th>Name</th>
+                        <th>Unlock Date</th>
+                        <th>Status</th>
+                        <!--<th pSortableColumn="category">Category <p-sortIcon field="category"></p-sortIcon></th>
+                        <th pSortableColumn="rating">Reviews <p-sortIcon field="rating"></p-sortIcon></th>
+                        <th pSortableColumn="inventoryStatus">Status <p-sortIcon field="inventoryStatus"></p-sortIcon></th>-->
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-award>
+                    <tr>
+                      
+                      
+                        
+                        <td style="width:14%; min-width:10rem;"><span class="p-column-title">Image</span>
+                            <img src="assets/demo/images/award/award.png" [alt]="award.archievementName" width="100" class="shadow-4" />
+                        </td>
+                        <td style="width:14%; min-width:10rem;">
+                            <span class="p-column-title">Name</span>
+                            {{award.archievementName}}
+                        </td>
+                        <td style="width:14%; min-width:8rem;">
+                            <span class="p-column-title">Unlock Date</span>
+                            {{award.unlockDate ? award.unlockDate.substring(0,4) + '-' + award.unlockDate.substring(4,6) + '-' + award.unlockDate.substring(6,8) : ''}}
+                        </td>
+                        <td style="width:14%; min-width: 10rem;"><span class="p-column-title">Status</span>
+                            
+                            <span class="product-badge status-achieve" *ngIf="award && award.unlockInd=='Y'">Unlock</span>
+                            <span class="product-badge status-lock" *ngIf="award && award.unlockInd=='N'">Lock</span>
+                        </td>
+                    </tr>
+                </ng-template>
+            </p-table>
+        </div>
+    </div>
+</div>

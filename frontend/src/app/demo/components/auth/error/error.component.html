@@ -1,0 +1,223 @@
+<div class="surface-ground flex align-items-center justify-content-center min-h-screen min-w-screen overflow-hidden">
+    <div class="flex flex-column align-items-center justify-content-center">
+        <span class="text-900 font-bold mb-5 pt-5 text-4xl">Welcome to Voter Registration Application</span>
+        <div class="mw-full" style="border-radius:56px; max-width: 70%; padding:0.3rem; background: linear-gradient(180deg, rgb(84 90 121 / 40%) 10%, rgba(33, 150, 243, 0) 30%);">
+            <div class="surface-card py-8 px-5 sm:px-8 flex flex-column align-items-center" style="border-radius:53px">
+                <div class="grid flex flex-column align-items-center" >
+                    <img src="assets/demo/images/login/reg.png" alt="Error" class="mb-5" width="80%">
+                    <p-panel class="pb-4" header="Important Notice" [toggleable]="true">
+                        <p>
+                            Deadline alert: 10/23/2023 is the last day to register before the 11/07/2023 election.
+                        </p>
+                        <p>
+                            If you are not a U.S. citizen and a resident of Pennsylvania at least 30days before the net election, you CANNOT register to vote.
+                        </p>
+
+                    </p-panel>
+                                        
+                    <div class="field col-12 md:col-12">
+                        <p-steps [model]="steps" [(activeIndex)]="activeIndex" [readonly]="false"></p-steps>
+                    </div>
+
+                    <div style="display: contents" *ngIf="step == 1">
+                        <span class="text-900 mb-1">To register you must:</span>
+                        <ul>
+                            <li>Be a United States citizen at least 30 days before the next election</li>
+                            <li>Be a resident of Pennsylvania and your election district for at least 30 days before the next election</li>
+                            <li>Be at least 18 years old on the day of the next election</li>
+                        </ul>
+                        <button pButton pRipple icon="pi pi-arrow-right" label="Start Here" class="p-button-text" (click)="nextStep(2)"></button>
+                    </div>
+
+                    <div  *ngIf="step == 2">
+                        <div class="formgrid grid">
+                            <div class="field col-12 md:col-6">
+                                <label for="firstName" class="font-semibold">First Name*</label>
+                                <input id="firstName" [(ngModel)]="firstName" type="text" class=" w-full text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary" >
+                            </div>
+                            <div class="field col-12 md:col-6">
+                                <label for="middleName" class="font-semibold">Middle Name/Initial</label>
+                                <input id="middleName" [(ngModel)]="middleName" type="text" class=" w-full text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary" >
+                            </div>
+                            <div class="field col-12 md:col-6">
+                                <label for="lastName" class="font-semibold">Last name*</label>
+                                <input id="lastName" [(ngModel)]="lastName" type="text" class=" w-full text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary" >
+                            </div>
+                            
+                            <div class="field col-12 md:col-6">
+                                <label for="suffix" class="font-semibold">Suffix</label>
+                                <input id="suffix" [(ngModel)]="suffix" type="text" class=" w-full text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary">
+                            </div>
+
+                            <div class="field col-12 md:col-6">
+                                <label for="phone" class="font-semibold">Phone</label>
+                                <input id="phone" [(ngModel)]="phone" type="text" class=" w-full text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary">
+                            </div>
+
+                            <div class="field col-12 md:col-6">
+                                <label for="email" class="font-semibold">E-mail</label>
+                                <input id="email" [(ngModel)]="email" type="text" class=" w-full text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary">
+                            </div>
+
+                            <div class="field col-12 md:col-6">
+                                <label for="password" class="font-semibold">Password</label>
+                                <input id="password" [(ngModel)]="password" type="password" class=" w-full text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary">
+                            </div>
+
+                            <div class="field col-12 md:col-6">
+                                <label for="passwordC" class="font-semibold">Password Confirm</label>
+                                <input id="passwordC" [(ngModel)]="passwordC" type="password" class=" w-full text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary">
+                            </div>
+
+                            <div class="field col-12 md:col-6" >
+                                <label for="birthDate" class="font-semibold">Birth Date* </label>
+                                <p-calendar class="block" id="birthDate" [(ngModel)]="birthDate" [showIcon]="true"></p-calendar>
+                            </div>
+                            
+                            <div class="field col-12 md:col-6">
+                                <label for="aaaaa" class="font-semibold">Female</label>
+                                <div id="aaaaa">
+                                    <div class="w-full inline ml-1" >
+                                        <p-radioButton name="gender" value="Female" [(ngModel)]="gender" inputId="gender1"></p-radioButton>
+                                        <label for="gender1" class="ml-3 font-semibold">Female</label>
+                                    </div>
+                                    
+                                    <div class="w-full inline ml-5">
+                                        <p-radioButton name="gender" value="Male" [(ngModel)]="gender" inputId="gender2"></p-radioButton>
+                                        <label for="gender2" class="ml-3 font-semibold">Male</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="field col-12 md:col-6" >
+                                <label for="driverLicense" class="font-semibold">Identification*</label>
+                                <input id="driverLicense" [(ngModel)]="driverLicense" type="text" placeholder="PA driver's license or PennDOT ID" class=" w-full text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary">
+                            </div>
+
+                            <div class="field col-12 md:col-6">
+                                <label for="socialSecurityNum" >&nbsp;</label>
+                                <input id="socialSecurityNum" [(ngModel)]="socialSecurityNum" placeholder="last 4 digits of Social Security Number" type="text" class=" w-full text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary">
+                            </div>
+
+                            <div class="field col-12 md:col-6" >
+                                <label for="party" class="font-semibold">Political Party* </label>
+                                <p-dropdown id="partyStyle" class="block w-full" placeholder="Select party" [options]="parties" inputId="party" [(ngModel)]="selectedParty" optionLabel="name"></p-dropdown>
+                            </div>
+
+                        </div>
+
+                        <div class="grid grid-nogutter justify-content-between">
+                            <button pButton pRipple icon="pi pi-arrow-left" label="Back" class="p-button-text" (click)="preStep(1)"></button>
+                            <button pButton pRipple icon="pi pi-arrow-right" label="Next" class="p-button-text" (click)="nextStep(3)"></button>
+                        </div>
+                    </div>
+
+                    <div style="display: contents" *ngIf="step == 3">
+                        <div class="formgrid grid">
+                            <div class="field col-12 md:col-12">
+                                <label for="aaaaa" class="font-semibold">I have a street address or permanent residence</label>
+                                <div id="aaaaa">
+                                    <div *ngFor="let option of residenseOption" class="w-full inline ml-1">
+                                        <p-radioButton [inputId]="option.key" name="option" [value]="option" [(ngModel)]="residenseFlag" (onClick)="changeResidenseOption(option.key)"></p-radioButton>
+                                        <label [for]="option.key" class="ml-2">{{ option.name }}</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div *ngIf="residenseFlag == 'hasResidense' " class="field col-12 md:col-6" >
+                                <label for="city" class="font-semibold">City* </label>
+                                <input id="city" [(ngModel)]="selectedCity" type="text" placeholder="City of Residense" class=" w-full text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary" >
+                            </div>
+                            <div *ngIf="residenseFlag == 'hasResidense' " class="field col-12 md:col-6">
+                                <label for="zipCode" class="font-semibold">Zip Code* Ex:12345</label>
+                                <input id="zipCode" [(ngModel)]="zipCode" type="text" placeholder="Zip Code" class=" w-full text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary" >
+                            </div>
+                            <div *ngIf="residenseFlag == 'hasResidense' " class="field col-12 md:col-6">
+                                <label for="streetAddress" class="font-semibold">Your Address*</label>
+                                <input id="streetAddress" [(ngModel)]="streetAddress" type="text" placeholder="Street Address" class=" w-full text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary" >
+                            </div>
+                            <div *ngIf="residenseFlag == 'hasResidense' " class="field col-12 md:col-6">
+                                <label for="streetAddress2" class="font-semibold">&nbsp;</label>
+                                <input id="streetAddress2" [(ngModel)]="streetAddress2" type="text" placeholder="Street Address2" class=" w-full text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary" >
+                            </div>
+                            <div *ngIf="residenseFlag == 'hasResidense' " class="field col-12 md:col-6">
+                                <label for="unitType" class="font-semibold">Unit Type(if applicable)</label>
+                                <input id="unitType" [(ngModel)]="unitType" type="text" class=" w-full text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary" >
+                            </div>
+                            <div *ngIf="residenseFlag == 'hasResidense' " class="field col-12 md:col-6">
+                                <label for="unitNumber" class="font-semibold">Unit Number(if applicable)</label>
+                                <input id="unitNumber" [(ngModel)]="unitNumber" type="text" class=" w-full text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary" >
+                            </div>
+
+                            <div *ngIf="residenseFlag == 'noResidense' " class="field col-12 md:col-6" >
+                                <label for="countryLive" class="font-semibold">Country where you live* </label>
+                                <p-dropdown id="countryLive" class="block w-full" [options]="countryLiveOption" inputId="countryLive" [(ngModel)]="selectedCountryLive" optionLabel="name"></p-dropdown>
+                            </div>
+
+                            <div *ngIf="residenseFlag == 'noResidense' " class="field col-12 md:col-6" >
+                                <label for="municipality" class="font-semibold">Municipality where you live* </label>
+                                <p-dropdown id="municipality" class="block w-full" [options]="municipalityOption" inputId="municipality" [(ngModel)]="selectedMunicipality" optionLabel="name"></p-dropdown>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div *ngIf="step == 3">
+                        <div class="formgrid grid">
+                            <div class="field col-12 md:col-12">
+                                <span>Skip malling information if it's same as your residence address above.</span>
+                            </div>
+                            <div class="field col-12 md:col-6">
+                                <label for="maillingAddr" class="font-semibold">Mailling Address</label>
+                                <input id="maillingAddr" type="text" class=" w-full text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary" >
+                            </div>
+                            <div class="field col-12 md:col-6">
+                                <label for="maillingCity" class="font-semibold">Mailling City</label>
+                                <input id="maillingCity" type="text" class=" w-full text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary" >
+                            </div>
+
+                            <div class="field col-12 md:col-6">
+                                <label for="maillingState" class="font-semibold">Mailling State</label>
+                                <input id="maillingState" type="text" class=" w-full text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary" >
+                            </div>
+                            <div class="field col-12 md:col-6">
+                                <label for="maillingZip" class="font-semibold">Mailling Zip Code</label>
+                                <input id="maillingZip" type="text" class=" w-full text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary" >
+                            </div>
+                            
+                        </div>
+                        <div class="grid grid-nogutter justify-content-between">
+                            <button pButton pRipple icon="pi pi-arrow-left" label="Back" class="p-button-text" (click)="preStep(2)"></button>
+                            <button pButton pRipple icon="pi pi-arrow-right" label="Next" class="p-button-text" (click)="nextStep(4)"></button>
+                        </div>
+                    </div>
+
+                    <div style="display: contents" *ngIf="step == 4">
+                        <div class="formgrid grid">
+                            
+                            <div class="field col-12 md:col-12">
+                                <p-fieldset legend="Declaration" [toggleable]="true">
+                                    <span class="font-semibold">
+                                        I decalre that <br>
+                                        <ul>
+                                            <li>I am a United States citizen and will have been a citizen at least 1 month on the day of election.</li>
+                                            <li>I will be at least 18 years old on the day of election.</li>
+                                            <li>I am legally qualified to vote.</li>
+                                        </ul>
+
+                                    </span>
+                                </p-fieldset>                            
+                            </div>
+                            <div class="grid grid-nogutter justify-content-between">
+                                <p-confirmDialog [rejectVisible]='false' [acceptLabel]="acceptLabel" [style]="{width: '50vw'}"></p-confirmDialog>
+                                <button pButton pRipple icon="pi pi-arrow-left" label="Back" class="p-button-text" (click)="preStep(3)"></button>
+                                <button pButton pRipple icon="pi pi-check" label="Submit" class="p-button-text align-items-center" (click)="submit()"></button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

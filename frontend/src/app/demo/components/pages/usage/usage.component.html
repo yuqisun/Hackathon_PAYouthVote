@@ -1,0 +1,20 @@
+
+<div class="card">
+    <h5>Learn How to Use Our Service</h5>
+    <p-timeline [value]="events1" align="alternate" styleClass="customized-timeline">
+        <ng-template pTemplate="marker" let-event>
+        <span class="flex z-1 w-2rem h-2rem align-items-center justify-content-center text-white border-circle shadow-2" [style.backgroundColor]="event.color">
+            <i [ngClass]="event.icon"></i>
+        </span>
+        </ng-template>
+        <ng-template pTemplate="content" let-event>
+            <p-card [header]="event.status" [subheader]="event.date">
+                <img *ngIf="event.image" [src]="'assets/demo/images/product/' + event.image" [alt]="event.name" width="200" class="shadow-2" />
+                <p class="line-height-3 my-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
+                    quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
+                <button pButton label="Read more" class="p-button-outlined mb-5"></button>
+            </p-card>
+        </ng-template>
+    </p-timeline>
+</div>
+
