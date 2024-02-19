@@ -28,3 +28,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Docker build & push to aws
 Run `docker image build -t hackathon-angular .`
+
+ng serve --disable-host-check
+ngrok http --domain=unique-koala-nicely.ngrok-free.app 4200

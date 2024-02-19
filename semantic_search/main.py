@@ -28,8 +28,9 @@ contents: ###{context}###
 question: ```{question}```
 """
 
-# model_path = "./model/"
+model_path = "./model/"
 embeddings_model = "GanymedeNil/text2vec-large-chinese"
+# embeddings_model = "GanymedeNil/text2vec-large-chinese"
 embeddings = HuggingFaceEmbeddings(model_name=embeddings_model, model_kwargs={'device': 'cpu'})
 
 CHUNK_SIZE = 250
