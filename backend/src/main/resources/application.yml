@@ -4,9 +4,9 @@ spring:
   datasource:
     driver-class-name: org.h2.Driver
     url: jdbc:h2:mem:h2database
-    #url: jdbc:h2:file:D:\Projects\NiuProject\h2database
-    username: sa
-    password: password
+    #url: jdbc:h2:file:\xx\h2database
+    username: 
+    password: 
   jpa:
     show-sql: true
     database-platform: org.hibernate.dialect.H2Dialect
