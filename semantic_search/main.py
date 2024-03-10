@@ -28,7 +28,8 @@ contents: ###{context}###
 question: ```{question}```
 """
 
-model_path = "./model/"
+# model_path = "./model/"
+# https://huggingface.co/GanymedeNil/text2vec-large-chinese  apache-2.0 license
 embeddings_model = "GanymedeNil/text2vec-large-chinese"
 # embeddings_model = "GanymedeNil/text2vec-large-chinese"
 embeddings = HuggingFaceEmbeddings(model_name=embeddings_model, model_kwargs={'device': 'cpu'})
