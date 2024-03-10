@@ -1,5 +1,9 @@
 # Hackathon: PA Youth Vote
 
+### Overview
+This project was built during a 24-hour hackathon event, with detailed mission and challenge outlined below.   
+We utilized Angular, Java, and Python.
+
 ### Team Name
 Italian Cannon
 
