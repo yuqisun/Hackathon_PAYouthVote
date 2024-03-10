@@ -4,8 +4,10 @@
 This project was built during a 24-hour hackathon event, with detailed mission and challenge outlined below.   
 We utilized Angular, Java, and Python.
 
+
 ### Team Name
 Italian Cannon
+
 
 ### Team Members
 - @yuqisun - captain
@@ -17,11 +19,14 @@ Italian Cannon
 - @wflsnow - Developer
 - @pitaya777 - Developer
 
+
 ### Mission
 PA Youth Vote is a nonpartisan collaboration of youth, educators, and organizations working to elevate youth voices, improve public school civics education, and empower youth as civic actors. Together, they are building youth political power and changing the policy and culture around youth voting in Pennsylvania.
 
+
 ### Challenge
 PA Youth Vote is seeking a solution that will make voting more accessible to young people who are of voting age in high school and college. They would like to use technology to facilitate youth voting: makeing it transparent, fun and rewarding by creating an interactive application or system that will encourage youth to engage civically, including registering to vote, researching candidates(i.e. creating an Election Day "cheat sheet"), and helping them vote by mail or find their polling location.
+
 
 ### Solution
 * Responsive Platform
@@ -33,4 +38,28 @@ PA Youth Vote is seeking a solution that will make voting more accessible to you
   - Improving the ways, we serve Youth to understand the importance of Vote, to make an easy registeration & Vote are aims of RCPY Votes. We have implemented 4 features: Notification, Award, Pay with Points and Contact us to encourage Youth in RCPY Votes platform.
 * Semantic Search Engine
   - A semantic search engine based on AI model to help voters to get teh most relevant contents from all kinds of medias. More than that, for videos, voters can jump to the timestamp which they are interest in directly to understand the claims of candidates without watching the whole video. This remarkable search engine will help search candidates' information to be easier and will save your time & efforts.
+
+
+### Get Started
+This project consists of three parts: frontend, backend, and a semantic search module. The frontend is developed using Angular, while the backend employs Java with the Spring framework. The semantic search module utilizes Python and an embedding model.
+
+#### Start Backend
+```bash
+cd Hackathon_PAYouthVote\backend
+mvn clean package
+java -jar .\target\Hackathon-1.0.jar
+```
+
+#### Start Frond
+```bash
+cd Hackathon_PAYouthVote\frontend
+ng serve
+```
+
+#### Start Semantic Search
+```bash
+cd Hackathon_PAYouthVote\semantic_search
+pip install -r requirements.txt
+python main.py
+```
 
