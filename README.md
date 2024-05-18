@@ -3,13 +3,10 @@
     <img src="https://github.com/citi.png" alt="Citi" width="80" height="80">
   </a>
 
-  <h3 align="center">Citi/citi-ospo</h3>
+  <h3 align="center">Citi/Hackathon_PAYouthVote</h3>
 
   <p align="center">
-    A collection of guidelines and resources from<br/>Citi's Open Source Program Office
-    <br />
-    <br />
-    <a href="./FOSS Contribution Guidelines.md"><strong>Explore our enterprise open source guidelines »</strong></a>
+    PA Youth Vote is seeking a solution that will make voting more accessible to<br/>young people who are of voting age in high school and college.
     <br />
     <br />
   </p>
@@ -78,4 +75,4 @@ python main.py
 
 ## Contact
 
-If you have a query or require support with this project, [raise an issue](https://github.com/Citi/citi-ospo/issues). Otherwise, reach out to opensource@citi.com.
+If you have a query or require support with this project, [raise an issue](https://github.com/yuqisun/Hackathon_PAYouthVote/issues). Otherwise, reach out to opensource@citi.com.
